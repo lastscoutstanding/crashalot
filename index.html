@@ -3,95 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CrashALot.com | Gaming & Chaos</title>
+    <title>M'enfin! CrashALot.com</title>
     <style>
-    body {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/GFChemieVoorBeginners.jpg');
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-      color: #fff;
-      font-family: 'Courier New', Courier, monospace;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      margin: 0;
-      min-height: 100vh;
-    }
-
-        header {
-            border: 4px solid #ff00ff;
+        /* Basis instellingen met jouw achtergrondplaatje */
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                              url('img/GFChemieVoorBeginners.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #1a1a1a;
+            font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             padding: 20px;
-            box-shadow: 10px 10px 0px #00ffff;
-            margin-bottom: 40px;
-            text-align: center;
+            margin: 0;
+            min-height: 100vh;
         }
-        h1 { font-size: 3rem; text-transform: uppercase; margin: 0; }
+
+        /* De Guust Flater Header: Handgetekende look */
+        header {
+            background-color: #fff9e6; /* Vintage papier kleur */
+            border: 4px solid #1a1a1a;
+            padding: 30px;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            text-align: center;
+            /* De 'wobble' techniek voor onregelmatige randen */
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
+            box-shadow: 10px 10px 0px #000;
+            max-width: 90%;
+            transform: rotate(-1deg);
+        }
+
+        h1 { 
+            font-size: 3.5rem; 
+            text-transform: uppercase; 
+            margin: 0; 
+            letter-spacing: -2px;
+            color: #d32f2f; /* Guust-rood */
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0 0;
+            font-weight: bold;
+            color: #2e7d32; /* Donkergroen zoals zijn trui */
+        }
+
+        /* Grid met kaarten als strip-panelen */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
             width: 100%;
-            max-width: 1000px;
+            max-width: 1100px;
         }
+
         .card {
-            border: 3px solid #fff;
-            padding: 20px;
-            background: #1e1e1e;
-            transition: transform 0.2s;
-            cursor: pointer;
-        }
-        .card:hover {
-            transform: rotate(-2deg) scale(1.05);
-            border-color: #ffff00;
-        }
-        .comic-bubble {
             background: #fff;
-            color: #000;
-            padding: 10px;
-            border-radius: 50%;
-            display: inline-block;
-            margin-bottom: 10px;
-            font-weight: bold;
+            border: 3px solid #1a1a1a;
+            padding: 25px;
+            position: relative;
+            /* Slordige panelen */
+            border-radius: 10px 100px 15px 80px/80px 15px 100px 10px;
+            box-shadow: 6px 6px 0px #1a1a1a;
+            transition: transform 0.2s;
         }
-        footer { margin-top: 50px; opacity: 0.6; }
+
+        .card:hover {
+            transform: scale(1.03) rotate(1deg);
+            background-color: #ffffcc;
+        }
+
+        /* Tekstballon effect */
+        .comic-bubble {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 5px 15px;
+            display: inline-block;
+            transform: skew(-10deg);
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        h3 {
+            margin-top: 0;
+            text-decoration: underline;
+            font-size: 1.5rem;
+        }
+
+        p {
+            line-height: 1.4;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            padding: 40px;
+            color: #fff;
+            text-shadow: 2px 2px #000;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Kleine Guust-details */
+        .boom {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background: #ffeb3b;
+            border: 2px solid #000;
+            padding: 5px;
+            transform: rotate(15deg);
+            font-weight: bolder;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>CRASH-A-LOT</h1>
-        <p>Your daily dose of digital destruction</p>
+        <h1>M'ENFIN! CRASH-A-LOT</h1>
+        <p>— Voor als het weer eens vakkundig misgaat —</p>
     </header>
 
-    <!-- <div class="grid">
+    <div class="grid">
+        <!-- Paneel 1 -->
         <div class="card">
-            <div class="comic-bubble">POW!</div>
-            <h3>GAMING</h3>
-            <p>Reviews van games die vaker crashen dan een Windows 95 pc.</p>
+            <div class="boom">BOEM!</div>
+            <div class="comic-bubble">EXPERIMENT #42</div>
+            <h3>GAMING CHAOS</h3>
+            <p>Games testen tot ze uit elkaar vallen. De grens tussen een bug en een feature is hier flinterdun.</p>
         </div>
+
+        <!-- Paneel 2 -->
         <div class="card">
-            <div class="comic-bubble">LOL!</div>
-            <h3>HUMOR</h3>
-            <p>Memes die alleen wij begrijpen. Of niet.</p>
+            <div class="comic-bubble">GRRRR!</div>
+            <h3>CHEMIE & HUMOR</h3>
+            <p>Net als in de kelder bij Kwabbernoot: we mengen dingen die niet gemengd mogen worden. Lachgas gegarandeerd.</p>
         </div>
+
+        <!-- Paneel 3 -->
         <div class="card">
-            <div class="comic-bubble">WHAM!</div>
-            <h3>COMICS</h3>
-            <p>Wekelijkse strips over het leven van een gefrustreerde gamer.</p>
+            <div class="comic-bubble">Zzzzz...</div>
+            <h3>STRIPS & COMICS</h3>
+            <p>Alles over de klassiekers en nieuwe chaos. Van Franquin tot de modernste flaters.</p>
         </div>
+
+        <!-- Paneel 4 -->
         <div class="card">
-            <div class="comic-bubble">???</div>
-            <h3>CHAOS</h3>
-            <p>Alles wat nergens anders past, maar wel kapot moet.</p>
+            <div class="boom">KNAL!</div>
+            <div class="comic-bubble">DE GAFOPHONE</div>
+            <h3>MUZIEK & HERRIE</h3>
+            <p>Onderdelen gezocht voor een instrument dat de fundering van het internet kan laten trillen.</p>
         </div>
-    </div> -->
+    </div>
 
     <footer>
-        &copy; 2024 CrashALot.com - Gemaakt met koffie en frustratie.
+        &copy; 2024 CrashALot.com — "M'enfin, ik wist niet dat dat knopje daarvoor was!"
     </footer>
 
 </body>
 </html>
-
